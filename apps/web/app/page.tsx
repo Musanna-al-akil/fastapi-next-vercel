@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <h1>Hello World</h1>
       <button onClick={() => {
-        fetch("http://localhost:8000/")
+        fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/`)
           .then(res => res.json())
           .then(setData);
       }}>Click me</button>
